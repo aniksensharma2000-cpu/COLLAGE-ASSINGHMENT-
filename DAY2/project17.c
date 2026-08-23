@@ -1,9 +1,12 @@
 #include <stdio.h>
-int main (){
-    int sum = 0;
-    for(int i = 1; i <= 10;i++){
-        sum = i*i;
-    }
-    printf("The sun of the suares of the frist 10 netural number is: %d\n , sum");
-    return ;
+int main() {
+    int number, first_digit, second_digit, third_digit, sum;
+    printf("Enter a 3-digit number: ");
+    scanf("%d", &number);
+    first_digit = number / 100;
+    second_digit = (number / 10) % 10;
+    third_digit = number % 10;
+    sum = first_digit + second_digit + third_digit;
+    printf("The sum of the digits is: %d\n", sum);
+    return 0;
 }
