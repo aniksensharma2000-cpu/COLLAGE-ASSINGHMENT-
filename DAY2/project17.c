@@ -1,12 +1,18 @@
 #include <stdio.h>
-int main() {
-    int number, first_digit, second_digit, third_digit, sum;
-    printf("Enter a 3-digit number: ");
-    scanf("%d", &number);
-    first_digit = number / 100;
-    second_digit = (number / 10) % 10;
-    third_digit = number % 10;
-    sum = first_digit + second_digit + third_digit;
-    printf("The sum of the digits is: %d\n", sum);
+#include <math.h>
+
+int main(){
+     int a, b, c;
+    float r1, r2;
+
+    printf("Enter the values of a, b, c: \n");
+    scanf("%d%d%d", &a, &b, &c);
+
+    r1 = (- b - sqrt(b * b - 4 * a * c)) / 2 * a;
+
+    r2 = (- b + sqrt(b * b - 4 * a * c)) / 2 * a;
+
+    printf("Roots: %f, %f", r1, r2);
+
     return 0;
 }
